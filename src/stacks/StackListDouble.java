@@ -3,7 +3,7 @@ package stacks;
 import interfaces.IStack;
 
 public class StackListDouble<T> implements IStack<T> {
-
+    
     @Override
     public void push(T item) {
         // TODO Auto-generated method stub
