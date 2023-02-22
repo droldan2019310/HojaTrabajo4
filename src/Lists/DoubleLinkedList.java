@@ -3,8 +3,8 @@ package Lists;
 import java.util.NoSuchElementException;
 
 public class DoubleLinkedList<T> {
-    private Node head;
-    private Node tail;
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
  
     public DoubleLinkedList() {
@@ -29,7 +29,6 @@ public class DoubleLinkedList<T> {
         	tail = tmp;
        }
         size++;
-        System.out.println("Adding element: "+element);
     }
  
     public void addLast(T element) {         
@@ -42,14 +41,11 @@ public class DoubleLinkedList<T> {
         	head = tmp;
         }
         size++;
-        System.out.println("Adding element: "+element);
     }
  
     public void iterateForward(){         
-        System.out.println("Iterating forward.");
         Node<T> tmp = head;
         while(tmp != null){
-            System.out.println(tmp.element);
             tmp = tmp.next;
         }
     }
@@ -70,7 +66,6 @@ public class DoubleLinkedList<T> {
         head = head.next;
         head.prev = null;
         size--;
-        System.out.println("Deleted element: "+tmp.element);
         return tmp.element;
     }
  
@@ -78,10 +73,20 @@ public class DoubleLinkedList<T> {
         if (size == 0) throw new NoSuchElementException();
         Node<T> tmp = tail;
         tail = tail.prev;
-        tail.next = null;
         size--;
-        System.out.println("Deleted element: "+tmp.element);
         return tmp.element;
     }
 
+    
+
+    
+    public T topelement(){
+        if (isEmpty()){
+            System.out.println("Stack is empty");
+            return null;
+        }
+        else{
+            return tail.element;
+        }
+    }
 }

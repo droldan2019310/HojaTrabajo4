@@ -53,7 +53,7 @@ public class App {
                     break;
                 case 3:
                     System.out.println("1. SIMPLE");
-                    System.out.println("3. DOUBLE");
+                    System.out.println("2. DOUBLE");
                     int ansList = in.nextInt();
                     menuList(ansList);
                     break;
