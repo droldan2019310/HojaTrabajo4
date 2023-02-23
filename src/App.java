@@ -25,11 +25,16 @@ public class App {
         main.start();
     }
 
+    /**
+     * method start program
+     */
     public void start(){
         menu();
     }
 
-
+    /**
+     * menu to select stack
+     */
     public void menu(){
         calculator = Calculator.getInstance();
         int ans =0;
@@ -77,6 +82,11 @@ public class App {
         }
     }
 
+
+    /**
+     * submenu to select list
+     * @param ans
+     */
     public void menuList(int ans){
         switch (ans) {
             case 1:
@@ -95,7 +105,9 @@ public class App {
     }
 
 
-
+    /**
+     * read file in assets/file.txt
+     */
     public void readFile(){
         postfix = "";
         File file = new File("src/assets/file.txt");
@@ -122,6 +134,10 @@ public class App {
     }
 
 
+    /**
+     * validar character (postfix)
+     * @param character
+     */
     public void validateCharacter(char character){
         if(Character.isDigit(character)){
             String numString = Character.toString(character);;
@@ -132,6 +148,10 @@ public class App {
         }
     }
 
+    /**
+     * menu to select operator in postfix
+     * @param operator
+     */
     public void menuOperations(char operator){
         float a,b,result=0;
         switch(operator){
@@ -162,6 +182,10 @@ public class App {
     }
 
 
+    /**
+     * convert infix expression in postfix expression
+     * @param infix
+     */
     public void convertPostfix(String infix){
         stack.push('#');          
         
@@ -207,7 +231,11 @@ public class App {
     }
 
 
-
+    /**
+     * validate sign in expresssion infix
+     * @param ch
+     * @return
+     */
     int validateSign(char ch) {
         if(ch == '+' || ch == '-') {
            return 1;              

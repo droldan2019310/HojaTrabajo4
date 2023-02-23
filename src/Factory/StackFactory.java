@@ -8,7 +8,11 @@ import stacks.stackArrayList;
 
 public class StackFactory<T>{
 
-
+    /**
+     * create stack depends of param stack
+     * @param stack
+     * @return
+     */
     public IStack<T> createStack(String stack){
         switch (stack) {
             case "ARRAY":

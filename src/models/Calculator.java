@@ -5,7 +5,10 @@ import interfaces.ICalculator;
 public final class Calculator implements ICalculator{
     private static Calculator calculator;
 
-
+    /**
+     * singleton return instance of calculator
+     * @return
+     */
     public static Calculator getInstance(){
         if(calculator == null){
             calculator = new Calculator();
@@ -13,6 +16,9 @@ public final class Calculator implements ICalculator{
         return calculator;
     }
 
+    /**
+     * add two numbers
+     */
     @Override
     public float add(float a, float b) {
         // TODO Auto-generated method stub
@@ -20,6 +26,9 @@ public final class Calculator implements ICalculator{
         return result;
     }
 
+    /**
+     * substract two numbers
+     */
     @Override
     public float subtraction(float a, float b) {
         // TODO Auto-generated method stub
@@ -27,6 +36,9 @@ public final class Calculator implements ICalculator{
         return result;
     }
 
+    /**
+     * multiply two numbers
+     */
     @Override
     public float multiplication(float a, float b) {
         // TODO Auto-generated method stub
@@ -34,6 +46,9 @@ public final class Calculator implements ICalculator{
         return result;
     }
 
+    /**
+     * divide two numbers
+     */
     @Override
     public float division(float a, float b) {
         // TODO Auto-generated method stub
@@ -41,6 +56,9 @@ public final class Calculator implements ICalculator{
         return result;
     }
 
+    /**
+     * method not used
+     */
     @Override
     public void getNextImput() {
         // TODO Auto-generated method stub
