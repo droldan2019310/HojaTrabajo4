@@ -1,18 +1,18 @@
-## Getting Started
+## PATRÓN SINGLETON
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Singleton es un patrón de diseño que satisface las necesidades de tener una misma instancia en cualquier parte del programa.
+ 
 
-## Folder Structure
+ventajas:
+- soluciona el problema de obtener una misma instancia para 2 o más procesos.
+- menor espacio en memoria.
 
-The workspace contains two folders by default, where:
+desventajas:
+- no podemos tener un seguimiento secuencial de nuestro código.
+- No es una solución elegante.
+- creamos dependencia en nuestro programa y puede que por un funcionamiento de un proceso afecte al otro.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Uso de Singleton
+Es adecuado ya que solo usamos la calculadora una vez en ejecución. Es decir no hay dos funciones al mismo tiempo utilizandolo.
+Singleton es un patrón de diseño que se debe tener mucho cuidado en donde se va a realizar ya que es depende 
+del problema donde puede ser  muy efectivo. 
