@@ -2,7 +2,16 @@ package models;
 
 import interfaces.ICalculator;
 
-public class Calculator implements ICalculator{
+public final class Calculator implements ICalculator{
+    private static Calculator calculator;
+
+
+    public static Calculator getInstance(){
+        if(calculator == null){
+            calculator = new Calculator();
+        }
+        return calculator;
+    }
 
     @Override
     public float add(float a, float b) {

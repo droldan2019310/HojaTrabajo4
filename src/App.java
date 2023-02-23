@@ -17,7 +17,7 @@ public class App {
     StackFactory<Integer> stackfactoryNumber = new StackFactory<Integer>();
     IStack stack;
     IStack stackNumber;
-    private Calculator calculator = new Calculator();
+    private Calculator calculator;
     String postfix = "";
 
     public static void main(String[] args) throws Exception {
@@ -31,6 +31,7 @@ public class App {
 
 
     public void menu(){
+        calculator = Calculator.getInstance();
         int ans =0;
         while(ans != 4){
             System.out.println("ELIJA EL STACK QUE NECESITE USAR:");
